@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: 0.4.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-31 13:12+0100\n"
-"PO-Revision-Date: 2020-04-11 15:01+0300\n"
+"PO-Revision-Date: 2020-05-14 18:01+0300\n"
 "Last-Translator: Alex Little <alex@alexlittle.net>\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.3\n"
 "Language-Team: \n"
 
 #: forms.py:19
@@ -590,29 +590,29 @@ msgstr "Students"
 msgid "button_cohort_save"
 msgstr "Save"
 
-#: templates/oppia/home.html:25 templates/course/activity.html:24 templates/course/course.html:18
+#: templates/oppia/home.html:25 templates/course/detail.html:24 templates/course/course.html:18
 msgid "Date"
 msgstr ""
 
-#: templates/oppia/home.html:26 templates/course/activity.html:25 templates/course/course.html:19
+#: templates/oppia/home.html:26 templates/course/detail.html:25 templates/course/course.html:19
 #: templates/viz/summary.html:30 templates/viz/summary.html:53 templates/viz/summary.html:78
 #: templates/viz/summary.html:101 templates/viz/summary.html:124 templates/viz/summary.html:147
 #: templates/viz/summary.html:172 templates/viz/summary.html:195 templates/viz/summary.html:220
 msgid "Total"
 msgstr ""
 
-#: templates/oppia/home.html:53 templates/course/activity.html:58
+#: templates/oppia/home.html:53 templates/course/detail.html:58
 msgid "courses_recent_activity"
 msgstr "Recent Activity"
 
-#: templates/oppia/home.html:54 templates/course/activity.html:59 templates/course/course.html:92
+#: templates/oppia/home.html:54 templates/course/detail.html:59 templates/course/course.html:92
 #: templates/viz/summary.html:251 templates/viz/summary.html:252 templates/viz/summary.html:256
 #: templates/viz/summary.html:257 templates/viz/summary.html:260 templates/viz/summary.html:261
 #: templates/viz/summary.html:264 templates/viz/summary.html:265 templates/viz/summary.html:266
 msgid "graph_generating"
 msgstr ""
 
-#: templates/oppia/home.html:59 templates/course/activity.html:65
+#: templates/oppia/home.html:59 templates/course/detail.html:65
 msgid "home_leaderboard"
 msgstr "Leaderboard"
 
@@ -753,11 +753,10 @@ msgid ""
 "<p>Your course was successfully uploaded</p>\n"
 msgstr ""
 
-#: templates/course/activity-detail.html:26 templates/course/activity.html:56
-#: templates/course/cohorts.html:8 templates/course/course.html:90
-#: templates/course/feedback-responses.html:25 templates/course/feedback.html:7
-#: templates/course/quiz-attempts.html:25 templates/course/quizzes.html:7 templates/course/schedules.html:8
-#: templates/oppia/preview/home.html:26
+#: templates/course/activity-detail.html:26 templates/course/detail.html:56 templates/course/cohorts.html:8
+#: templates/course/course.html:90 templates/course/feedback-responses.html:25
+#: templates/course/feedback.html:7 templates/course/quiz-attempts.html:25 templates/course/quizzes.html:7
+#: templates/course/schedules.html:8 templates/oppia/preview/home.html:26
 msgid "Tags:"
 msgstr ""
 
@@ -797,23 +796,23 @@ msgstr ""
 msgid "No hits yet"
 msgstr ""
 
-#: templates/course/activity.html:26
+#: templates/course/detail.html:26
 msgid "Page completed"
 msgstr ""
 
-#: templates/course/activity.html:27
+#: templates/course/detail.html:27
 msgid "Quiz completed"
 msgstr ""
 
-#: templates/course/activity.html:28
+#: templates/course/detail.html:28
 msgid "Media viewed"
 msgstr ""
 
-#: templates/course/activity.html:29
+#: templates/course/detail.html:29
 msgid "Resources viewed"
 msgstr ""
 
-#: templates/course/activity.html:44
+#: templates/course/detail.html:44
 msgid "No. attempts"
 msgstr ""
 
