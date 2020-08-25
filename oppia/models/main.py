@@ -124,16 +124,16 @@ class Course(models.Model):
 
     def get_quiz_activities(self):
         quiz = Activity.objects.filter(section__course=self,
-                                           type=Activity.QUIZ)
+                                       type=Activity.QUIZ)
         return quiz
 
     def get_tags(self):
         from oppia.models import Tag
         tags = Tag.objects.filter(coursetag__course=self)
-        str = ""
+        tag_str = ""
         for t in tags:
-            str = str + t.name + ", "
-        return str[:-2]
+            tag_str = tag_str + t.name + ", "
+        return tag_str[:-2]
 
     def sections(self):
         sections = Section.objects.filter(course=self).order_by('order')
@@ -150,6 +150,9 @@ class Course(models.Model):
 
     def get_no_media(self):
         return Media.objects.filter(course=self).count()
+
+    def get_no_trackers(self):
+        return Tracker.objects.filter(course=self).count()
 
     @staticmethod
     def get_pre_test_score(course, user):
@@ -396,6 +399,15 @@ class Activity(models.Model):
 
         return event_points
 
+    def get_no_quiz_responses(self):
+        # get the actual quiz id
+        try:
+            quiz = Quiz.objects.get(quizprops__name='digest',
+                                    quizprops__value=self.digest)
+        except Quiz.DoesNotExist:
+            return 0
+        return QuizAttempt.objects.filter(quiz_id=quiz.id).count()
+
 
 class Media(models.Model):
     URL_MAX_LENGTH = 250
@@ -602,7 +614,8 @@ class Tracker(models.Model):
                     quiz.setAttribute("course", course.shortname)
                     quiz.setAttribute("event", quiz_attempt.event)
                     quiz.setAttribute("points", str(quiz_attempt.points))
-                    quiz.setAttribute("timetaken", str(quiz_attempt.time_taken))
+                    quiz.setAttribute("timetaken",
+                                      str(quiz_attempt.time_taken))
                     track.appendChild(quiz)
                 except QuizAttempt.DoesNotExist:
                     pass
